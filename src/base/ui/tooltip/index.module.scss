@@ -1,0 +1,13 @@
+@import 'assets/styles/colors';
+
+.tooltipContent {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.secondary {
+  svg {
+    fill: $vibrantCyan !important;
+  }
+}

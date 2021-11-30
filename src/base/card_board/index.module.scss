@@ -1,0 +1,42 @@
+@import 'assets/styles/colors';
+
+.cardBoard {
+  .cardBoardToolbar {
+    display: flex;
+    align-items: center;
+
+    > *:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    .datePicker {
+      margin-bottom: 4px;
+
+      label {
+        color: $white;
+      }
+
+      > section > div:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .cardBoardRowInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 3px 0;
+      max-width: 350px;
+      font-size: 15px;
+
+      span:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+}

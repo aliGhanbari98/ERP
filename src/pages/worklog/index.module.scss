@@ -1,0 +1,25 @@
+.worklog {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .infos {
+    display: flex;
+
+    > * {
+      flex: 1 0 21%;
+      margin: 0 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

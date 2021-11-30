@@ -1,0 +1,59 @@
+@import 'assets/styles/colors';
+
+@keyframes loadingAnimation {
+  0% {
+    background: $white;
+  }
+  50% {
+    background: $darkGrey;
+  }
+  100% {
+    background: $white;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.image {
+  position: relative;
+
+  :global(.lazyload-wrapper) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    animation: loadingAnimation 1s ease infinite;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.loaded {
+    .placeholder {
+      animation: fadeOut 1s ease forwards;
+    }
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 200ms;
+  }
+}

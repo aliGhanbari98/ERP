@@ -1,0 +1,62 @@
+@import 'assets/styles/colors';
+
+.progressBar {
+  background: $sensitiveGrayDark;
+  overflow: hidden;
+  border-radius: 2px;
+
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 10px;
+    .name {
+      color: $richPurpleDarkest;
+      font-size: 12px;
+      border-bottom: 1px solid $richPurpleDarkest;
+    }
+
+    .value {
+      font-size: 12px;
+      font-weight: 700;
+      color: $richGreen;
+    }
+
+    .failed {
+      color: $richRedDark;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      svg {
+        fill: $richPurpleDarkest;
+        cursor: pointer;
+      }
+      .arrowCheck {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .bar {
+    ::before {
+      background-color: $richGreen;
+    }
+    > div {
+      width: 100%;
+      height: 3px;
+      border-radius: 0;
+      background: $sensitiveGrayDark;
+    }
+  }
+
+  .failed {
+    ::before {
+      background-color: $richRedDark;
+    }
+    color: $richRedDark;
+  }
+}

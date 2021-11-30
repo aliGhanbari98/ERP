@@ -1,0 +1,24 @@
+@import 'assets/styles/colors';
+
+.contractSettings {
+  .form {
+    min-height: 400px;
+
+    .progressBar {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        width: 35%;
+
+        :global(.chUrmm::after) {
+          background-color: $vibrantCyan !important;
+        }
+
+        svg {
+          fill: $vibrantCyan;
+        }
+      }
+    }
+  }
+}

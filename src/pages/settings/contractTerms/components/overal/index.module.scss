@@ -1,0 +1,21 @@
+@import 'assets/styles/colors';
+.overal {
+  .nameField {
+    width: 200px;
+  }
+
+  .checkBoxes {
+    display: flex;
+    align-items: center;
+    > :last-child {
+      margin-left: 50px;
+    }
+  }
+
+  .timeFields {
+    > :first-child {
+      margin-top: 20px;
+    }
+    width: 280px;
+  }
+}

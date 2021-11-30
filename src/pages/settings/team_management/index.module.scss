@@ -1,0 +1,117 @@
+@import 'assets/styles/colors';
+
+.teamManagement {
+  > *:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .form {
+    .inputs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > * {
+        flex: 0 1 30%;
+        margin-right: 20px;
+
+        &:first-child > div {
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .members {
+      display: flex;
+      flex-direction: column;
+      background: $white;
+      // padding: 20px;
+      margin-top: 20px;
+      border-radius: 6px;
+      height: 300px;
+
+      .header {
+        display: flex;
+        padding: 20px;
+
+        .icon svg {
+          fill: $vibrantCyan;
+        }
+
+        h3 {
+          margin-left: 10px;
+        }
+      }
+
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        padding: 20px;
+        padding-top: 0;
+
+        .row {
+          display: flex;
+          width: 100%;
+
+          .item {
+            width: auto;
+          }
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          background: $vibrantCyan;
+          padding: 5px;
+          margin: 20px 20px 0 0;
+          border-radius: 60px;
+
+          &.manager {
+            background: $richPurple;
+          }
+
+          p {
+            color: $white;
+            margin: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          > div {
+            margin-right: 10px;
+          }
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border: none;
+            padding: 10px;
+            margin-left: 20px;
+            cursor: pointer;
+
+            svg {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.closeButton {
+  > svg {
+    border: 2px solid $richRed;
+    border-radius: 100%;
+    padding: 2px;
+  }
+}

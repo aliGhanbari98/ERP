@@ -1,0 +1,41 @@
+before_script:
+  - docker version
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+stages:
+  - build
+  - deploy-dev
+  - production
+variables:
+  RUN_COMPOSE_NAME: "docker-compose.yml"
+  SERVICE_NAME: "front_panel"
+  STACK_NAME: "erp"
+
+build:
+  stage: build
+  script:
+    - docker build --rm --tag $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - master
+  when: manual
+
+deploy-dev:
+  stage: deploy-dev
+  tags:
+    - dev
+  script:
+    - echo ${STACK_NAME}_${SERVICE_NAME}
+    - docker service rm ${STACK_NAME}_${SERVICE_NAME} || true
+    - docker pull $CI_REGISTRY_IMAGE:latest
+    - docker stack deploy -c $RUN_COMPOSE_NAME $STACK_NAME
+  only:
+    - master
+  when: manual
+
+production:
+  stage: production
+  script:
+    - docker build --rm --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG
+  only:
+    - tags

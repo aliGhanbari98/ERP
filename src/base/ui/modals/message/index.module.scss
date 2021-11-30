@@ -1,0 +1,64 @@
+@import 'assets/styles/colors';
+
+.messageModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  > div {
+    position: initial !important;
+    margin: 0 !important;
+    width: 500px !important;
+
+    > div {
+      background: $sensitiveGray;
+
+      > div:last-child {
+        > div {
+          padding: 20px;
+          padding-top: 15px;
+        }
+
+        > div:first-child {
+          padding: 20px 20px 0 20px;
+          font-size: 14px;
+          font-weight: 900;
+
+          > div:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    > div {
+      margin-right: 10px;
+      background: $vibrantCyan;
+      border-radius: 100%;
+
+      svg {
+        fill: $white;
+        padding: 2px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

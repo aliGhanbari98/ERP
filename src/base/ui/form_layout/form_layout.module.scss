@@ -1,0 +1,29 @@
+@import 'assets/styles/colors';
+
+.formLayout {
+  padding: 20px;
+  background-color: $sensitiveGray;
+  border-radius: 6px;
+
+  > h2 {
+    color: $richPurple;
+  }
+
+  .body {
+    &.hasTitle {
+      margin-top: 40px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    .buttons {
+      .confirm {
+        margin-right: 20px;
+      }
+    }
+  }
+}

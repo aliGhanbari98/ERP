@@ -1,0 +1,312 @@
+@import 'assets/styles/colors';
+
+.name {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 42px;
+    height: 42px;
+    margin-right: 15px;
+  }
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmReject {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70px;
+  width: 100%;
+
+  > * {
+    pointer-events: all;
+    cursor: pointer;
+
+    svg {
+      border: 2px solid;
+      border-radius: 100%;
+      padding: 2px;
+    }
+
+    &:first-child {
+      fill: $richGreenDark;
+
+      svg {
+        border-color: $richGreenDark;
+      }
+    }
+
+    &:last-child {
+      fill: $richRed;
+
+      svg {
+        border-color: $richRed;
+      }
+    }
+  }
+}
+
+.decision {
+  display: flex;
+  flex-direction: column;
+  > * {
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  > *:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.profilePhoto {
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.approved {
+  color: $richGreenDark;
+}
+
+.pending {
+  color: $vibrantYellowDarker;
+}
+
+.rejected {
+  color: $richRed;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  border: 2px solid $richBlackLightest;
+  border-radius: 100%;
+  cursor: pointer;
+
+  svg {
+    fill: $richBlackLightest;
+    border-radius: 2px solid $richBlackLightest;
+  }
+}
+
+.trafficSummary {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > div {
+      margin-right: 5px;
+    }
+  }
+
+  .enter {
+    margin-bottom: 2px;
+
+    svg {
+      fill: $richGreenDark;
+      transform: rotate(90deg);
+    }
+  }
+
+  .leave {
+    svg {
+      fill: $richRed;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.worklogDetailsActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    &:not(.edit) {
+      border: 2px solid;
+      border-radius: 100%;
+    }
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  &.absent_edit {
+    color: $richRed;
+
+    .edit svg {
+      fill: $richRed;
+    }
+  }
+
+  &.overtime_edit,
+  &.mission_edit {
+    color: $richGreenDark;
+
+    .edit svg {
+      fill: $richGreenDark;
+    }
+  }
+
+  &.surplus_attendance_edit {
+    color: $vibrantYellow;
+
+    .edit svg {
+      fill: $vibrantYellow;
+    }
+  }
+}
+
+.workLogDetails {
+  appearance: none;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  border: 2px solid $richGreenDark;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.termDetails {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 120px;
+
+  > :nth-child(2) {
+    svg {
+      fill: $richGreenDark;
+    }
+  }
+  > :last-child {
+    svg {
+      fill: $richRedDark;
+    }
+  }
+}
+
+.shiftActions {
+  display: flex;
+
+  button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0 5px;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .edit svg {
+    fill: $richGreenDark;
+  }
+
+  .info svg {
+    fill: $vibrantCyan;
+  }
+
+  .group svg {
+    fill: $vibrantYellow;
+  }
+
+  .delete svg {
+    fill: $richRed;
+  }
+}
+
+.addRequestDropdown {
+  min-width: 130px;
+  max-width: 130px;
+}
+
+.deleteRequest {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 45px;
+
+  svg {
+    fill: $richRed;
+  }
+}
+
+.todayTraffic {
+  &.Entry {
+    color: $richGreenDark;
+  }
+
+  &.Leave {
+    color: $richRedDark;
+  }
+}
+
+.personnelActions {
+  display: flex;
+
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 10px;
+
+    svg {
+      fill: $richGreenDark;
+    }
+  }
+}

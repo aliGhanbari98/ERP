@@ -1,0 +1,40 @@
+@import 'assets/styles/colors';
+
+.switch {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+
+  button {
+    background: $darkGrey;
+    margin-left: 5px;
+
+    div {
+      color: $vibrantCyan;
+      transition: all 200ms;
+
+      svg {
+        fill: $vibrantCyan !important;
+        transition: all 200ms;
+      }
+    }
+
+    &:hover {
+      div {
+        color: $white !important;
+
+        svg {
+          fill: $white !important;
+        }
+      }
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+
+    &.arrow {
+      max-width: 45px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import 'assets/styles/colors';
+
+.addShift {
+  > div {
+    display: flex;
+    justify-content: center;
+    background: transparent !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+
+    > div {
+      background: $richPurple;
+      height: 100%;
+      box-shadow: rgba(27, 27, 37, 0.2) 0px 30px 40px,
+        rgba(27, 27, 37, 0.05) 0px 2px 4px;
+      border-radius: 4px;
+
+      > div {
+        > div:first-child {
+          align-items: center;
+          padding-top: 15px;
+          background: $richPurple;
+          color: $white;
+          font-weight: 900;
+          font-size: 22px;
+        }
+
+        > div:last-child {
+          padding: 15px;
+
+          .card {
+            background: $grey;
+            padding: 20px;
+            border-radius: 6px;
+
+            .inputs {
+              display: flex;
+              margin-bottom: 30px;
+
+              > *:last-child {
+                margin-left: 30px;
+              }
+            }
+
+            .table {
+              border-radius: 6px;
+            }
+
+            .footer {
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import 'assets/styles/colors';
+
+.holidays {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $sensitiveGray;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 6px;
+  min-height: 190px;
+
+  .days {
+    display: flex;
+    > span {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      flex: 0 0 14.2%;
+      color: $richBlack;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 0 0 14.2%;
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  > div {
+    position: initial !important;
+    margin: 0 !important;
+    width: 500px !important;
+
+    > div {
+      background: $sensitiveGray;
+
+      > div:last-child {
+        > div {
+          padding: 20px;
+          padding-top: 15px;
+        }
+
+        > div:first-child {
+          padding: 20px 20px 0 20px;
+          font-size: 14px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  .inputs {
+    display: flex;
+    align-items: flex-end;
+
+    > div {
+      max-width: 350px;
+
+      > div {
+        margin: 0;
+      }
+    }
+
+    button {
+      margin-top: 3px;
+      margin-left: 20px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+
+    .deleteButton {
+      background: $richRed;
+      margin-right: 20px;
+
+      &:hover {
+        background: darken($richRed, 5%);
+      }
+
+      &:active {
+        background: darken($richRed, 15%);
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import 'assets/styles/colors';
+
+.button {
+  &.primary {
+    &.secondaryColor {
+      background: $vibrantCyan !important;
+    }
+  }
+
+  &.secondary {
+    &.secondaryColor {
+      > div {
+        color: $vibrantCyan !important;
+      }
+    }
+  }
+
+  &:hover {
+    // background: red !important;
+    &.primary {
+      &.secondaryColor {
+        background: darken($vibrantCyan, 5%) !important;
+      }
+    }
+  }
+
+  &:active {
+    &.primary {
+      &.secondaryColor {
+        background: darken($vibrantCyan, 15%) !important;
+      }
+    }
+  }
+}

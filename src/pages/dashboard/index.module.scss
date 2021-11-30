@@ -1,0 +1,160 @@
+@import 'assets/styles/colors';
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .subTitle {
+      margin-top: 10px;
+    }
+
+    .stepsWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 30px 0;
+      margin-top: 45px;
+      position: relative;
+
+      div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        width: 100%;
+
+        &:not(:last-child) {
+          span:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            width: 100%;
+            // animation: progress 2s ease forwards;
+            height: 2px;
+            background: $vibrantCyan;
+          }
+        }
+
+        &:nth-child(3) {
+          span:before {
+            animation-delay: 1.8s;
+          }
+        }
+
+        &:nth-child(4) {
+          span:before {
+            animation-delay: 3.4s;
+          }
+        }
+
+        &:nth-child(5) {
+          span:before {
+            animation-delay: 5s;
+          }
+        }
+
+        &.done {
+          svg {
+            display: block !important;
+            fill: $richPurple;
+          }
+        }
+
+        span {
+          display: block;
+          width: 25px;
+          height: 25px;
+
+          svg {
+            background: $white;
+            fill: $richBlack;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .infos {
+    display: flex;
+
+    > * {
+      flex: 1 0 21%;
+      margin: 0 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .leaveIcon {
+      transform: rotate(270deg);
+    }
+  }
+
+  .tables {
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      flex: 1 0 40%;
+
+      &:first-child {
+        flex: 1 0 55%;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .printButton {
+    display: flex;
+    appearance: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.printBody {
+  header {
+    display: none;
+  }
+
+  > div > div:last-child {
+    display: none;
+  }
+}
+
+.addReqButton {
+  background-color: $vibrantCyan !important;
+}

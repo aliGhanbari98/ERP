@@ -1,0 +1,37 @@
+@import 'assets/styles/colors';
+
+.textFieldWrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  > div {
+    width: 100%;
+  }
+
+  .elemAfter {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    &.hasLabel {
+      top: 35px;
+    }
+  }
+
+  .uploader {
+    position: absolute;
+    right: 10px;
+    bottom: 23px;
+
+    svg {
+      fill: $vibrantCyan;
+      cursor: pointer;
+    }
+  }
+
+  input::placeholder {
+    color: $richBlackLightest;
+    opacity: 1;
+  }
+}

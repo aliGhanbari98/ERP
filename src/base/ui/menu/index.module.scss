@@ -1,0 +1,83 @@
+@import 'assets/styles/colors';
+
+.menu {
+  position: relative;
+  z-index: 3;
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    background: $white;
+    padding: 10px 20px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.2),
+      0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    transition: 200ms;
+
+    .item {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      border: none;
+      padding: 10px 0;
+      border-bottom: 1px solid $darkGrey;
+      cursor: pointer;
+      transition: 200ms;
+
+      span {
+        transition: 200ms;
+        font-size: 14px;
+      }
+
+      &:hover {
+        span {
+          font-weight: 600;
+          color: $richPurple;
+        }
+      }
+
+      .icon {
+        margin-right: 10px;
+
+        svg {
+          fill: $vibrantCyan;
+        }
+      }
+    }
+
+    .footerButton {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        padding-left: 0;
+        padding-right: 0;
+
+        > div {
+          color: $richRedDark;
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+          transition: 200ms;
+        }
+
+        &:hover > div {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .items {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import 'assets/styles/colors';
+
+.employees {
+  > div {
+    max-width: 1000px !important;
+
+    > div > div {
+      > div:first-child {
+        align-items: center;
+
+        .label {
+          display: flex;
+          align-items: center;
+
+          > div {
+            transform: none !important;
+            margin-right: 15px;
+
+            svg {
+              fill: $vibrantCyan;
+            }
+          }
+        }
+      }
+
+      > div:last-child {
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 50px;
+
+          &:first-child {
+            border-top: 2px solid #f3f3f7;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 2px solid #f3f3f7;
+          }
+
+          h5 {
+            width: 100%;
+          }
+
+          h5:not(:first-child) {
+            text-align: center;
+          }
+        }
+
+        h6 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

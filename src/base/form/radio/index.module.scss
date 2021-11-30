@@ -1,0 +1,10 @@
+@import 'assets/styles/colors';
+
+.secondary {
+  &.selected,
+  &:hover {
+    &:before {
+      border-color: $vibrantCyan !important;
+    }
+  }
+}

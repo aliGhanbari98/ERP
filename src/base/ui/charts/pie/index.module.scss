@@ -1,0 +1,23 @@
+.pieChart {
+  .active {
+    z-index: 10;
+  }
+
+  :global(.recharts-pie-sector) {
+    cursor: pointer;
+  }
+
+  .chartLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+
+    &.labelActive {
+      transform: translateY(-5px);
+    }
+  }
+}

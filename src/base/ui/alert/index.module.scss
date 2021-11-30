@@ -1,0 +1,24 @@
+@import 'assets/styles/colors';
+
+.alert {
+  padding: 10px 25px;
+  margin: 20px 30px !important;
+  font-family: 'Lato';
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 99999;
+
+  &.error {
+    background: $richRedDark;
+  }
+
+  &.success {
+    background: $richGreen;
+  }
+
+  &.info {
+    background: $vibrantCyan;
+  }
+}

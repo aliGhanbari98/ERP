@@ -1,0 +1,28 @@
+@import 'assets/styles/colors';
+
+.authInput {
+  width: 100%;
+  > label {
+    font-size: 12px;
+    margin: 5px 0;
+    color: $richBlack;
+  }
+  .verificationInput {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-top: 3px;
+    input {
+      border: none !important;
+      border-radius: 0px !important;
+      border-bottom: 1px solid $richBlack !important;
+      margin-right: 10px;
+      font-size: 14px;
+      color: $richBlack;
+    }
+  }
+}

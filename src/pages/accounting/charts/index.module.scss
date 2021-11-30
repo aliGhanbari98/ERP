@@ -1,0 +1,83 @@
+@import 'assets/styles/colors';
+
+.accountingCharts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 30px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    background: $grey;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        color: $richPurple;
+      }
+    }
+
+    .chart {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      height: 100%;
+
+      text {
+        font-size: 12px;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: 100%;
+
+        .total {
+          display: flex;
+          align-items: baseline;
+
+          p {
+            margin: 0;
+            margin-left: 5px;
+            color: $richBlackLightest;
+            font-weight: 600;
+          }
+        }
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          height: 120px;
+
+          .item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0 0 0;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            .box {
+              display: block;
+              width: 14px;
+              height: 14px;
+              margin-right: 12px;
+              border-radius: 3px 7px 3px 3px;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

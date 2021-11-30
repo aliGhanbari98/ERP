@@ -1,0 +1,74 @@
+@import 'assets/styles/colors';
+
+.section {
+  width: 100%;
+
+  h3 {
+    color: $richPurple;
+    margin: 25px 0 10px 0;
+  }
+
+  .form {
+    .fields {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-top: 20px;
+
+      > * {
+        flex: 1 0 23%;
+        margin-right: 15px;
+      }
+
+      .grow {
+        flex-basis: 73%;
+      }
+
+      .noGrow {
+        flex-grow: 0;
+      }
+
+      .datePicker {
+        margin-bottom: 4px;
+
+        > section:first-child {
+          > div:first-child {
+            width: 100%;
+          }
+
+          > div:last-child {
+            svg {
+              fill: $vibrantCyan;
+            }
+          }
+
+          input {
+            background: $white;
+          }
+        }
+      }
+
+      .infoButton {
+        max-width: 160px;
+
+        > div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      > * {
+        flex: 0 0 130px;
+
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

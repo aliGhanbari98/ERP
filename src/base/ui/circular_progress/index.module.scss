@@ -1,0 +1,39 @@
+@import 'assets/styles/colors';
+
+.progress {
+  svg {
+    circle:nth-child(2) {
+      stroke: $darkGrey;
+    }
+  }
+
+  &.hasValue {
+    svg {
+      circle:nth-child(3) {
+        stroke: $richGreenDark;
+      }
+    }
+  }
+
+  &:not(.hasValue) {
+    svg {
+      circle:nth-child(3) {
+        stroke: transparent !important;
+      }
+    }
+  }
+
+  > div > div > div {
+    color: $richGreenDark;
+  }
+
+  label {
+    color: $richBlackLightest;
+  }
+}
+
+.smallerText {
+  > div > div > div {
+    font-size: 17px !important;
+  }
+}

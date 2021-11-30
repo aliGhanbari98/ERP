@@ -1,0 +1,179 @@
+@import 'assets/styles/colors';
+
+.worklogDetails {
+  .overall {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05),
+      0px 10px 20px rgba(0, 0, 0, 0.1);
+
+    .filters {
+      display: flex;
+
+      .dropdown {
+        margin-right: 50px;
+
+        input {
+          background: $grey;
+        }
+      }
+
+      .datePicker {
+        label {
+          color: $white;
+          font-weight: 900;
+        }
+
+        > section:first-child {
+          > div:first-child,
+          div:nth-child(2) {
+            width: 140px;
+          }
+
+          > div:nth-child(2) {
+            margin-right: 0;
+          }
+
+          > div:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .progresses {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 100px;
+      margin-top: 10px;
+
+      .progress {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+          margin: 0;
+          margin-top: 5px;
+        }
+
+        > div {
+          width: 125px;
+          height: 125px;
+
+          > div {
+            width: 125px;
+            height: 125px;
+          }
+        }
+
+        &:not(.present) {
+          div div div div {
+            font-size: 32px;
+          }
+        }
+
+        &.delay {
+          div div div div {
+            color: $richRed;
+          }
+
+          p {
+            color: $richRed;
+          }
+
+          circle:nth-child(2) {
+            stroke: $richRedLightest;
+          }
+
+          circle:nth-child(3) {
+            stroke: $richRed;
+          }
+        }
+
+        &.surplus {
+          div div div div {
+            color: $vibrantYellowDark;
+          }
+
+          p {
+            color: $vibrantYellowDark;
+          }
+
+          circle:nth-child(2) {
+            stroke: $vibrantYellowLightest;
+          }
+
+          circle:nth-child(3) {
+            stroke: $vibrantYellowDark;
+          }
+        }
+
+        &.present {
+          p {
+            color: $richGreenDark;
+          }
+
+          > div {
+            width: 160px;
+            height: 160px;
+
+            > div {
+              width: 160px;
+              height: 160px;
+            }
+          }
+        }
+
+        &.mission {
+          div div div div {
+            color: $richBlueDark;
+          }
+
+          p {
+            color: $richBlueDark;
+          }
+
+          circle:nth-child(2) {
+            stroke: $richBlueLightest;
+          }
+
+          circle:nth-child(3) {
+            stroke: $richBlueDark;
+          }
+        }
+
+        &.overtime {
+          div div div div {
+            color: $vibrantGreenDarker;
+          }
+
+          p {
+            color: $vibrantGreenDarker;
+          }
+
+          circle:nth-child(2) {
+            stroke: $vibrantGreenLightest;
+          }
+
+          circle:nth-child(3) {
+            stroke: $vibrantGreenDarker;
+          }
+        }
+      }
+    }
+  }
+}
+
+.detailsModal {
+  > div {
+    max-width: 900px !important;
+    > div > div > div:last-child {
+      padding: 20px;
+    }
+  }
+}

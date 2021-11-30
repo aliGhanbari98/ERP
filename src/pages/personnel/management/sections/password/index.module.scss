@@ -1,0 +1,13 @@
+.password {
+  display: flex;
+  align-items: center;
+
+  > div {
+    flex: 0 0 23%;
+    width: auto;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import 'assets/styles/colors';
+
+.navBar {
+  background: $darkGrey;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 80px;
+
+    li {
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: transparent;
+        padding: 14px 10px;
+        border: none;
+        color: $richBlackLightest;
+        cursor: pointer;
+
+        svg {
+          fill: $richBlackLightest;
+          width: 24px;
+          height: 24px;
+          transition: all 200ms;
+        }
+
+        span {
+          font-size: 12px;
+          margin-top: 5px;
+          transition: all 200ms;
+
+          path {
+            transition: all 200ms;
+          }
+        }
+      }
+
+      &:hover {
+        svg {
+          fill: $vibrantCyan;
+
+          path {
+            fill: $vibrantCyan;
+          }
+        }
+
+        span {
+          color: $vibrantCyan;
+        }
+      }
+
+      &.active {
+        svg {
+          fill: $richPurple;
+
+          path {
+            fill: $richPurple;
+          }
+        }
+
+        span {
+          color: $richPurple;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

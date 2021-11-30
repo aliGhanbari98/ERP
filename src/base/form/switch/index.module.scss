@@ -1,0 +1,59 @@
+@import 'assets/styles/colors';
+
+.switch {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  background: $grey;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+
+  input {
+    appearance: none;
+    position: relative;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 19px;
+      height: 19px;
+      background: $richGreenDark;
+      position: absolute;
+      top: -10px;
+      left: -1px;
+      border-radius: 100%;
+      transition: all 200ms;
+      z-index: 1;
+    }
+  }
+
+  .icon {
+    position: absolute;
+
+    svg {
+      fill: $richBlack;
+    }
+
+    &:first-child {
+      left: 2px;
+    }
+
+    &:last-child {
+      right: 5px;
+    }
+  }
+
+  &:not(.checked) {
+    input {
+      &:before {
+        left: 24px;
+        background: $richRedDark;
+      }
+    }
+  }
+}

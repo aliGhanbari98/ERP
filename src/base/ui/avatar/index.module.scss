@@ -1,0 +1,79 @@
+@import 'assets/styles/colors';
+
+@keyframes buttons {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.avatar {
+  position: relative;
+
+  .image {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border: 2px solid $vibrantCyan;
+    border-radius: 100%;
+    text-align: center;
+    object-fit: fit;
+    object-position: center;
+  }
+
+  .actions {
+    &.disabled {
+      display: none;
+    }
+
+    > button,
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background: $vibrantCyan;
+      border: none;
+      padding: 0;
+      border-radius: 100%;
+      width: 0;
+      height: 0;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      animation: buttons 250ms ease forwards;
+      overflow: hidden;
+      animation-delay: 300ms;
+      transition: 200ms;
+
+      svg {
+        fill: $white;
+      }
+
+      &:hover {
+        background: darken($vibrantCyan, 5%) !important;
+      }
+
+      &:active {
+        background: darken($vibrantCyan, 15%) !important;
+      }
+
+      &.edit {
+        bottom: 30px;
+        right: -10px;
+
+        input {
+          display: none;
+        }
+      }
+
+      &.delete {
+        bottom: -5px;
+        right: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@import 'assets/styles/colors';
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 250px;
+  max-width: 500px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+
+  &.disabled {
+    pointer-events: none;
+
+    label,
+    .placeholder {
+      color: $richBlackLightest !important;
+    }
+
+    .chevron {
+      fill: $richBlackLightest !important;
+    }
+  }
+
+  label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #fff;
+    min-height: 16.8px;
+  }
+
+  &.hasLabel {
+    .placeholder {
+      top: 34px;
+    }
+
+    .chevron {
+      top: 36px;
+    }
+
+    .items {
+      top: 66px;
+    }
+  }
+
+  > div {
+    margin: 0;
+  }
+
+  > input {
+    margin: 0;
+    padding: 9px 15px 11px;
+    border: none;
+    outline: none;
+    transition: all 200ms;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+
+    // TODO:fix this doesn't work smh
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: red;
+      transition: background-color 200ms;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    &:focus {
+      &:after {
+        background-color: $richPurple;
+      }
+    }
+
+    &.active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .placeholder {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    pointer-events: none;
+    color: $black;
+    transition: all 200ms;
+
+    &.hide {
+      opacity: 0;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: $vibrantCyan;
+    }
+  }
+
+  .chevron {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms;
+    cursor: pointer;
+
+    &:not(.secondary) {
+      fill: $richPurple;
+    }
+
+    &.secondary {
+      fill: $vibrantCyan;
+    }
+
+    &.active {
+      transform: rotate(180deg) translateY(5px);
+    }
+  }
+
+  .items {
+    position: absolute;
+    background: #fff;
+    top: 39px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: rgba(27, 27, 37, 0.2) 0px 30px 40px,
+      rgba(27, 27, 37, 0.05) 0px 2px 4px;
+    width: 100%;
+    max-height: 167px;
+    overflow: hidden auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 200ms ease 0s;
+    z-index: 1;
+
+    &.active {
+      opacity: 1;
+      pointer-events: inherit;
+    }
+
+    .item {
+      background: transparent;
+      border: none;
+      appearance: none;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      border-bottom: 1px solid rgb(248, 248, 252);
+      cursor: pointer;
+      transition: all 200ms;
+
+      span {
+        transition: all 200ms;
+        font-size: 14px;
+      }
+
+      .checkbox {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        font-weight: bold;
+        color: $vibrantCyan;
+        background: $darkGrey;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: $vibrantCyan;
+      }
+
+      &.disabled {
+        color: $sensitiveGrayDark;
+        pointer-events: none;
+      }
+    }
+
+    .noData {
+      display: block;
+      padding: 15px;
+      color: $richBlackLightest;
+      text-align: center;
+    }
+  }
+}

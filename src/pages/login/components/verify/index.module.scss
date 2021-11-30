@@ -1,0 +1,187 @@
+@import 'assets/styles/colors';
+
+.loginPage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 1200px;
+
+  .info {
+    width: 600px;
+
+    .brand {
+      color: $vibrantCyan;
+    }
+
+    .desc {
+      color: $white;
+
+      &:last-child {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $sensitiveGray;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05),
+      0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 30px;
+    padding-bottom: 15px;
+    width: 512px;
+    min-width: 512px;
+    margin-left: 20px;
+
+    h5 {
+      margin-top: 15px;
+      color: $richPurple;
+    }
+
+    .form {
+      .companies {
+        margin-top: 15px;
+
+        .item {
+          background: transparent;
+          border: none;
+          display: flex;
+          align-items: center;
+          padding: 15px;
+          width: 100%;
+          cursor: pointer;
+          transition: all 200ms;
+
+          .icon {
+            margin-right: 10px;
+          }
+
+          svg {
+            transition: all 200ms;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $darkGrey;
+          }
+
+          &:first-child {
+            border-radius: 6px 6px 0px 0px;
+          }
+
+          &:last-child {
+            border-radius: 0px 0px 6px 6px;
+          }
+
+          &.selected {
+            background: $darkGrey;
+            color: $vibrantCyan;
+            font-weight: 900;
+
+            svg {
+              fill: $vibrantCyan;
+            }
+          }
+
+          &:hover {
+            background: $darkGrey;
+          }
+        }
+      }
+
+      .inputs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        .textField {
+          width: 100%;
+        }
+
+        button {
+          margin-top: 3px;
+          margin-left: 15px;
+        }
+
+        .ghostButton {
+          margin: 0px;
+          padding: 0px;
+          > div {
+            color: $richBlackLightest;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+
+        .buttonsContainer {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          > div {
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        .splitter {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          border-bottom: 2px solid $vibrantCyan;
+          margin-top: 40px;
+          > span {
+            position: absolute;
+            bottom: -8px;
+            background: $sensitiveGray;
+            padding: 0px 12px;
+            color: $richBlackLightest;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+
+        .otherLoginServices {
+          margin-top: 30px;
+          > div {
+            width: 220px;
+            padding: 8px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+            > span {
+              color: $richBlackLightest;
+              font-weight: 900;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .policy {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      > span {
+        font-weight: 300;
+        font-size: 10px;
+        color: $richBlackLightest;
+        > b {
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}

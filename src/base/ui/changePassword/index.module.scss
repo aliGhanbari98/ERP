@@ -1,0 +1,17 @@
+.changePassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}

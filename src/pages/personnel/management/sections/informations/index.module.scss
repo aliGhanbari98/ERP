@@ -1,0 +1,163 @@
+@import 'assets/styles/colors';
+
+.informations {
+  background-color: $sensitiveGray;
+  border-radius: 6px;
+
+  .tabs {
+    display: flex;
+
+    .tab {
+      background: transparent;
+      border: none;
+      flex-grow: 1;
+      padding: 15px 0px;
+      cursor: pointer;
+      position: relative;
+      transition: 200ms;
+      font-size: 14px;
+
+      &:before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0px;
+        background: transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        transition: 200ms;
+      }
+
+      &.active {
+        font-weight: 900;
+        color: $richPurple;
+
+        &:after {
+          height: 4px;
+          background: $richPurple;
+        }
+      }
+    }
+  }
+
+  > div:not(.tabs) {
+    padding: 20px;
+
+    .datePicker {
+      > section > div {
+        &:first-child {
+          width: 100%;
+        }
+
+        &:last-child {
+          width: 20px;
+
+          svg {
+            fill: $vibrantCyan;
+          }
+        }
+      }
+
+      input {
+        background: $white !important;
+      }
+    }
+  }
+
+  .personal {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      flex: 1 0 20%;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .contract {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+
+    .infoButton {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+
+      > button > div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .company {
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        color: $richPurple;
+        margin-bottom: 20px;
+      }
+
+      .inputs {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > * {
+          flex: 0 0 20%;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+
+        .infoButton {
+          max-width: 165px;
+
+          > div {
+            display: flex;
+            align-items: center;
+
+            > div {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .workFloat {
+          > div {
+            margin-bottom: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    padding-top: 0;
+  }
+}

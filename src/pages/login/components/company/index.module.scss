@@ -1,0 +1,67 @@
+@import 'assets/styles/colors';
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h2 {
+    margin-bottom: 20px;
+  }
+
+  .companies {
+    width: 100%;
+
+    h5 {
+      margin-bottom: 20px;
+    }
+
+    .item {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 200ms;
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      svg {
+        transition: all 200ms;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $darkGrey;
+      }
+
+      &:first-child {
+        border-radius: 6px 6px 0px 0px;
+      }
+
+      &:last-child {
+        border-radius: 0px 0px 6px 6px;
+      }
+
+      &.selected {
+        background: $darkGrey;
+        color: $vibrantCyan;
+        font-weight: 900;
+
+        svg {
+          fill: $vibrantCyan;
+        }
+      }
+
+      &:hover {
+        background: $darkGrey;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}

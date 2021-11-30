@@ -1,0 +1,36 @@
+@import 'assets/styles/colors';
+.overview {
+  .title {
+    display: flex;
+    align-items: center;
+    > h3 {
+      color: $richPurple;
+    }
+    svg {
+      fill: $vibrantCyanDarker;
+      margin-left: 10px;
+    }
+  }
+  .textfield {
+    width: 250px;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    svg {
+      fill: $richGreenDark;
+    }
+    > span {
+      color: $richGreenDark;
+      font-size: 12px;
+      font-weight: 400;
+      margin-left: 7px;
+    }
+  }
+
+  .rates {
+    > * {
+      margin-top: 25px;
+    }
+  }
+}

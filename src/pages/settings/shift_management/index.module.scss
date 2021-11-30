@@ -1,0 +1,40 @@
+.shiftManagement {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(:first-child) {
+    margin-top: 25px;
+  }
+
+  .form {
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 40px;
+
+      .modalButton {
+        width: 200px;
+        height: max-content;
+        margin-top: 27px;
+
+        > div {
+          display: flex;
+          align-items: center;
+
+          > div {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footerAction {
+  display: flex;
+
+  > *:last-child {
+    margin-left: 40px;
+  }
+}
